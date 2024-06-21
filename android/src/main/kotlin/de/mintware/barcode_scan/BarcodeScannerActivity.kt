@@ -46,6 +46,8 @@ class BarcodeScannerActivity : Activity(), ZXingScannerView.ResultHandler {
         super.onCreate(savedInstanceState)
 
         config = Protos.Configuration.parseFrom(intent.extras!!.getByteArray(EXTRA_CONFIG))
+
+        title = "Barcode Scanner"
     }
 
     private fun setupScannerView() {
